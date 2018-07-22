@@ -27,8 +27,8 @@ data <- data %>%
          crash = as.numeric(oneyear < 0.8)) %>% 
   na.omit()
 
-correction_logreg <- glm(correction ~ oneyear, data, family = binomial(link = "logit"))
-crash_logreg <- glm(crash ~ oneyear, data, family = binomial(link = "logit"))
+correction_logreg <- glm(correction ~ CAPE, data, family = binomial(link = "logit"))
+crash_logreg <- glm(crash ~ CAPE, data, family = binomial(link = "logit"))
 
 # Plot the logistic regression for corrections
 data %>%
