@@ -1,4 +1,5 @@
 library(ggplot2)
+library(MASS)
 
 # Import data from Shiller & Goyal
 source("https://raw.githubusercontent.com/KaroRonty/ShillerGoyalDataRetriever/master/ShillerGoyalDataRetriever.r")
@@ -49,3 +50,7 @@ data %>%
   annotate("text", x = current_cape + 3.2, y = 0.6, label = "Current CAPE") +
   xlab("CAPE") +
   ylab("Probability of crash in the next year")
+
+# Calculat odds ratios
+exp(cbind(coef(correction_logreg), confint(correction_logreg)))
+exp(cbind(coef(crash_logreg), confint(correction_logreg)))
