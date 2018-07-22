@@ -53,4 +53,4 @@ data %>%
 
 # Calculat odds ratios
 exp(cbind(coef(correction_logreg), confint(correction_logreg)))
-exp(cbind(coef(crash_logreg), confint(correction_logreg)))
+exp(cbind(coef(crash_logreg), confint(crash_logreg)))
