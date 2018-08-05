@@ -4,7 +4,7 @@ library(MASS)
 # Import data from Shiller & Goyal
 source("https://raw.githubusercontent.com/KaroRonty/ShillerGoyalDataRetriever/master/ShillerGoyalDataRetriever.r")
 
-# Input current CAPE ratio for plotting
+# Input current PE ratio for plotting
 current_pe <- 23.15
 
 # Recalculate the index without dividends
@@ -21,7 +21,7 @@ for (i in 1:I(nrow(full_data) - 1)) {
 
 full_data$PE <- as.numeric(full_data$P / full_data$E)
 
-# Remove first ten years where CAPE calculation is missing
+# Remove first ten years where PE calculation is missing
 data <- full_data[first(which(!is.na(full_data$PE))):last(which(!is.na(full_data$PE))), ]
 # Make a new column indicating if there was a correction or a crash during the next year
 data <- data %>%
