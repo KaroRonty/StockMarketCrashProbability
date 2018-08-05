@@ -7,5 +7,7 @@ probability of a crash is about 15 percent. High valuation levels seem to lead t
 
 A correction is defined as stocks being down more than 10 percent, and a crash is defined as being down more than 20 percent.
 
-![Correction](https://github.com/KaroRonty/StockMarketCrashProbability/blob/master/correction.PNG)
-![Crash](https://github.com/KaroRonty/StockMarketCrashProbability/blob/master/crash.PNG)
+Also includes the same analysis done with P/B and P/E
+
+![Correction](https://github.com/KaroRonty/StockMarketCrashProbability/blob/master/correction_cape.PNG)
+![Crash](https://github.com/KaroRonty/StockMarketCrashProbability/blob/master/crash_cape.PNG)
