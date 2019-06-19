@@ -16,7 +16,7 @@ for (i in 1:I(nrow(full_data) - 2)) {
 # Calculate one year returns
 full_data$oneyear <- NA
 for (i in 1:I(nrow(full_data) - 1)) {
-  full_data$oneyear[i + 1] <- (full_data$index[i + 13] / full_data$index[i + 1])
+  full_data$oneyear[i + 1] <- (full_data$index[i + 12] / full_data$index[i + 1])
 }
 
 # Remove first ten years where CAPE calculation is missing
@@ -51,6 +51,6 @@ data %>%
   xlab("CAPE") +
   ylab("Probability of crash in the next year")
 
-# Calculat odds ratios
+# Calculate odds ratios
 exp(cbind(coef(correction_logreg), confint(correction_logreg)))
 exp(cbind(coef(crash_logreg), confint(crash_logreg)))
